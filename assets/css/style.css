@@ -1,0 +1,72 @@
+
+#list-name {
+	font-size: 45px;
+	color: #0A5892;
+	font-weight: 700;
+	text-align: left;
+    /* text-shadow: 1px 2px 2px #0e1014; */
+}
+.btn-add {
+	background-color: #094c7d;
+	color: white;
+	border: none;
+	outline: none;
+	padding: 10px 22px;
+    vertical-align: baseline;
+    border-radius: 0 5px 5px 0;
+}
+.btn-add:hover {
+  background-color: #2d6792;
+}
+.container {
+	padding: 10px 20px;
+}
+.container input {
+	padding: 0 0 0 10px;
+	height: 32px;
+	line-height: 32px;
+	float: left;
+	border-radius: 5px 0 0 5px;
+	outline: none;
+    border: 1px solid #898989;
+}
+.remove {
+	position: absolute;
+	font-size: 12px;
+	box-shadow: 0 1px 0 #fff;
+	text-shadow: 0 1px 0 #fff;
+	background: #dad7d6;
+	color: #777;
+	border-radius: 12px;
+	padding: 2px 6px;
+	cursor: pointer;
+    top: 15px;
+    right: 14px;
+    outline: none;
+    border: 0;
+}
+.remove:hover {
+    box-shadow: 0px 1px 6px rgba(78, 76, 76, 0.7);
+}
+.container ul {
+	list-style: none;
+	padding: 0;
+    margin: 8px 0 0;
+}
+.container ul .list {
+	font-size: 20px;
+	color: #333;
+	padding: 12px 10px;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #dad7d6;
+    width: 100%;
+    max-width: 216px;
+    background-color: #f2efee;
+    position: relative;
+}
+.container ul .list:first-child {
+	border-radius: 5px 5px 0 0;
+}
+.container ul .list:last-child {
+	border-radius: 0 0 5px 5px;
+}
