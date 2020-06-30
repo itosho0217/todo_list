@@ -36,30 +36,30 @@ DOMの操作を用いたシンプルなTodoアプリの作成をします。
 
 #### 要素の取得
 
-`document.querySelector('.class')`
+`document.querySelector('.クラス名')`
 
 #### 要素の作成
 
-`document.createElement('div')`
+`document.createElement('タグ名')`
 
 #### 要素にクラスを追加
 
-`要素.classList.add('list')`
+`要素.classList.add('クラス名')`
 
 #### 要素のコンテンツ (文字) を編集
-`newTask.textContent = inputValue`
+`要素.textContent = inputValue`
 
 #### 子要素を追加
 
-`ul.appendChild(newTask)`
+`親要素.appendChild(子要素)`
 
 #### 親要素を削除
 
-`this.parentElement.remove();`
+`要素.parentElement.remove();`
 
 #### 要素のvalueを編集
 
-`document.querySelector('#input').value = ''`
+`document.querySelector('#id').value = '任意のvalueの値'`
 
 #### ある要素の親要素
 
@@ -75,8 +75,3 @@ DOMの操作を用いたシンプルなTodoアプリの作成をします。
     console.log('Hello World');
 });
 ```
-
-<!-- #### 注意点
-`querySelector`でclassで指定する時は「.」を付ける<br>
-idで指定する時は「#」<br>
-要素名で指定する時は何も付けない -->
