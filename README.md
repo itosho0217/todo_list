@@ -1,8 +1,9 @@
 # JavaScript ToDoアプリ
 
 ## 概要
-DOMの操作を用いたシンプルなTodoアプリの作成をします。<br>
-[完成見本](https://wizardly-jennings-40d4f5.netlify.app/)
+DOMの操作を用いたシンプルなTodoアプリの作成をします。
+
+* [完成見本](https://wizardly-jennings-40d4f5.netlify.app/)
 
 ## 機能
 * ユーザーはinputに文字を入力
