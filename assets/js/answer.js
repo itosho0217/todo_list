@@ -12,12 +12,14 @@ btn.addEventListener('click', function() {
         const newTask = document.createElement('li');
         // <li>にクラスを追加。（あらかじめstyle.cssに記述した、CSSを適用させるため）
         newTask.classList.add('list');
-
         // 入力された文字を作成した<li>のtextContentに代入
         newTask.textContent = inputValue;
         // ul要素を取得し、その子要素として、上記で作成した<li>を追加する
         const ul = document.querySelector('ul');
         ul.appendChild(newTask);
+        // inputの中に入力された文字を消去する
+        document.querySelector('#input').value = '';
+        
         // Deleteボタンを作成する
         const deleteBtn = document.createElement('div');
         // 作成した<div>のtextContentを'Delete'にする
@@ -29,8 +31,6 @@ btn.addEventListener('click', function() {
         // Deleteボタンをクリックした時に行われる処理を記述
         deleteBtn.addEventListener('click', function() {
             this.parentElement.remove();
-        });
-        // inputの中に入力された文字を消去する
-        document.querySelector('#input').value = '';
+        });       
     }
 })
