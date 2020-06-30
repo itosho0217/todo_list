@@ -1,34 +1,36 @@
-// ToDoList level3
-
-
+// ボタンの要素取得
 const btn = document.querySelector('#btn');
 
+// ボタンをクリックした時の行う機能を記述する
 btn.addEventListener('click', function() {
-    const inputText = document.querySelector('input').value;
-    console.log(inputText);
+    // input要素の中に入力された文字を取得
+    let inputValue = document.querySelector('input').value;
 
-    if(inputText !== '') {
+    // input要素の何か入力されている時にのみ、以下の処理を実行する
+    if(inputValue !== '') {
+        // <li>の作成
         const newTask = document.createElement('li');
+        // <li>にクラスを追加。（あらかじめstyle.cssに記述した、CSSを適用させるため）
         newTask.classList.add('list');
-        newTask.innerHTML = inputText;
-        console.log(newTask);
 
-        // const removeBtn = '<button class="remove">Done</button>';
-        const removeBtn = document.createElement('button');
-        removeBtn.innerHTML = 'Delete';
-        removeBtn.classList.add('remove');
-        removeBtn.addEventListener('click', function() {
-            const ul = newTask.parentElement;
-            console.log(ul);
-            this.parentElement.remove();
-        })
-
-        newTask.appendChild(removeBtn)
-    
+        // 入力された文字を作成した<li>のtextContentに代入
+        newTask.textContent = inputValue;
+        // ul要素を取得し、その子要素として、上記で作成した<li>を追加する
         const ul = document.querySelector('ul');
         ul.appendChild(newTask);
-
+        // Deleteボタンを作成する
+        const deleteBtn = document.createElement('div');
+        // 作成した<div>のtextContentを'Delete'にする
+        deleteBtn.textContent = 'Delete';
+        // クラス名'delete'を追加
+        deleteBtn.classList.add('delete');
+        // newTaskの子要素として、deleteBtnを追加
+        newTask.appendChild(deleteBtn)
+        // Deleteボタンをクリックした時に行われる処理を記述
+        deleteBtn.addEventListener('click', function() {
+            this.parentElement.remove();
+        });
+        // inputの中に入力された文字を消去する
+        document.querySelector('input').value = '';
     }
-
-
 })
