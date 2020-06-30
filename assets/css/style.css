@@ -28,7 +28,7 @@ form {
 	display: flex;
 	margin: 30px auto 20px;
 }
-input {
+input[type="text"] {
 	width: 75%;
 	padding: 3px 7px;
 	border: 1px solid #232b2b;

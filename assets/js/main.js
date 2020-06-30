@@ -3,8 +3,8 @@ const btn = document.querySelector('#btn');
 
 // ボタンをクリックした時の行う機能を記述する
 btn.addEventListener('click', function() {
-    // input要素の中に入力された文字を取得
-    let inputValue = document.querySelector('input').value;
+    // input要素の中に入力された文字を取得（inputは2つあるため、idで指定）
+    let inputValue = document.querySelector('#input').value;
 
     // input要素の何か入力されている時にのみ、以下の処理を実行する
     if(inputValue !== '') {
@@ -31,6 +31,6 @@ btn.addEventListener('click', function() {
             this.parentElement.remove();
         });
         // inputの中に入力された文字を消去する
-        document.querySelector('input').value = '';
+        document.querySelector('#input').value = '';
     }
 })
