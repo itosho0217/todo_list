@@ -5,18 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/0d908794ea.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+
     <div class="container">
             <h1>To Do List</h1>
             <form>
                 <input type="text" id="input" placeholder="Add your task here">
                 <input type="button" id="btn" value="Add">
             </form>
-            <ul class="todo-list">
+
+    <!-- Not yet 未完了のタスク -->
+                <h2 class="title_not_yet"><i class="fas fa-running"></i> Not yet</h2>
                 <!-- ここに要素が追加されていく -->
-            </ul>
+                 <ul class="todo-list" id="not-yet">
+                <li class="list">英単語10個勉強する
+                    <div class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                        <i class="far fa-check-circle"></i>
+                    </div>
+
+                </li>
+                </ul>
+
+<!-- done 完了済みのタスク  -->
+                <h2 class="title_done"><i class="fas fa-medal"></i> done</h2>
+                <ul class="list" id="done"></ul><ul class="todo-list">
+                <!-- ここに要素が追加されていく -->
+                <li class="list">英単語10個勉強する
+                    <div class="delete">
+                        <i class="fas fa-trash-alt"></i>
+                        <i class="far fa-check-circle"></i>
+                    </div>
+                </ul>
     </div>
-    <script src="./assets/js/answer.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
